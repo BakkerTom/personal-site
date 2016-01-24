@@ -1,0 +1,34 @@
+.home{
+	height: calc(100vh - 136px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	.title{
+		font: 70px 'Raleway';
+		font-weight: 700;
+		color: $grey-color-dark;
+		margin-bottom: 40px;
+	}
+
+	p{
+		max-width: 500px;
+		font-size: 16px;
+		margin-bottom: 30px;
+	}
+
+	.social-icons{
+		display: flex;
+
+		li{
+			list-style: none;
+			margin-right: 30px;
+
+			opacity: 0.4;
+			transition: opacity 0.2s ease-in-out;
+			&:hover{
+				opacity: 1;
+			}
+		}
+	}
+}
