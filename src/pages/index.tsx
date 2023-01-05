@@ -11,24 +11,26 @@ export default function HomePage() {
       <Seo />
       <main>
         <section className='bg-gray-50 dark:bg-gray-800'>
-          <div className='layout flex min-h-screen flex-col items-center justify-center text-center'>
-            <div className='mb-8'>
-              <Avatar className='h-20 w-20 rounded-full' />
+          <div className='flex min-h-screen flex-col items-center justify-center px-4'>
+            <div>
+              <div className='mb-8'>
+                <Avatar className='h-16 w-16 rounded-full' />
+              </div>
+              <p className='max-w-xl text-2xl font-semibold leading-normal text-gray-500 dark:text-gray-400'>
+                Hi! I'm{' '}
+                <span className='text-gray-800 dark:text-gray-300'>
+                  Tom Bakker
+                </span>
+                . I'm a designer and developer currently working at{' '}
+                <Link
+                  className='text-gray-600 transition-colors hover:text-primary-p3 dark:text-gray-300'
+                  href='https://apps.apple.com/nl/app/efteling/id727498391'
+                >
+                  Efteling
+                </Link>
+                . I build apps using Swift and React Native.
+              </p>
             </div>
-            <p className='max-w-xl text-2xl font-semibold leading-normal text-gray-500 dark:text-gray-400'>
-              Hi! I'm{' '}
-              <span className='text-gray-800 dark:text-gray-300'>
-                Tom Bakker
-              </span>
-              . I'm a designer and developer currently working at{' '}
-              <Link
-                className='text-gray-600 transition-colors hover:text-primary-p3 dark:text-gray-300'
-                href='https://apps.apple.com/nl/app/efteling/id727498391'
-              >
-                Efteling
-              </Link>
-              . I build apps using Swift and React Native.
-            </p>
           </div>
         </section>
       </main>
