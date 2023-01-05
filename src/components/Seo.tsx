@@ -5,8 +5,7 @@ import { useRouter } from 'next/router';
 const defaultMeta = {
   title: 'Tom Bakker',
   siteName: 'Tom Bakker',
-  description:
-    "Hi! I'm Tom Bakker",
+  description: "Hi! I'm Tom Bakker",
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
   url: 'https://tsnext-tw.thcl.dev',
   type: 'website',
@@ -71,11 +70,7 @@ export default function Seo(props: SeoProps) {
             property='og:publish_date'
             content={meta.date}
           />
-          <meta
-            name='author'
-            property='article:author'
-            content='Tom Bakker'
-          />
+          <meta name='author' property='article:author' content='Tom Bakker' />
         </>
       )}
 
