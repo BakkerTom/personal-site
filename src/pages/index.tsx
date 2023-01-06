@@ -17,7 +17,7 @@ export default function HomePage() {
                 <Avatar className='h-16 w-16 rounded-full' />
               </div>
               <p className='max-w-xl text-2xl font-semibold leading-normal text-gray-500 dark:text-gray-400'>
-                Hi! I'm{' '}
+                Hi! My name is{' '}
                 <span className='text-gray-800 dark:text-gray-300'>
                   Tom Bakker
                 </span>
