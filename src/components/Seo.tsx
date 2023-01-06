@@ -5,16 +5,12 @@ import { useRouter } from 'next/router';
 const defaultMeta = {
   title: 'Tom Bakker',
   siteName: 'Tom Bakker',
-  description: "Hi! I'm Tom Bakker",
+  description:
+    "Hi! My name is Tom Bakker. I'm a designer and developer currently working at Efteling. I build apps using Swift and React Native.",
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
-  url: 'https://tsnext-tw.thcl.dev',
+  url: 'https://tombakker.online',
   type: 'website',
   robots: 'follow, index',
-  /**
-   * No need to be filled, will be populated with openGraph function
-   * If you wish to use a normal image, just specify the path below
-   */
-  image: 'https://tsnext-tw.thcl.dev/images/large-og.png',
 };
 
 type SeoProps = {
@@ -54,14 +50,12 @@ export default function Seo(props: SeoProps) {
       <meta property='og:site_name' content={meta.siteName} />
       <meta property='og:description' content={meta.description} />
       <meta property='og:title' content={meta.title} />
-      <meta name='image' property='og:image' content={meta.image} />
       {/* Twitter */}
       <meta name='twitter:card' content='summary_large_image' />
       {/* // !STARTERCONF Remove or change to your handle */}
       <meta name='twitter:site' content='@BakkerTom' />
       <meta name='twitter:title' content={meta.title} />
       <meta name='twitter:description' content={meta.description} />
-      <meta name='twitter:image' content={meta.image} />
       {meta.date && (
         <>
           <meta property='article:published_time' content={meta.date} />
@@ -106,10 +100,5 @@ const favicons: Array<React.ComponentPropsWithoutRef<'link'>> = [
     href: '/favicon/favicon-16x16.png',
   },
   { rel: 'manifest', href: '/favicon/site.webmanifest' },
-  {
-    rel: 'mask-icon',
-    href: '/favicon/safari-pinned-tab.svg',
-    color: '#00e887',
-  },
   { rel: 'shortcut icon', href: '/favicon/favicon.ico' },
 ];
