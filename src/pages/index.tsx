@@ -2,6 +2,7 @@ import Link from 'next/link';
 import * as React from 'react';
 
 import Avatar from '@/components/avatar';
+import Button from '@/components/buttons/Button';
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 
@@ -31,10 +32,7 @@ export default function HomePage() {
                 . I build apps using Swift and React Native.
               </p>
               <div className='mt-12 flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4'>
-                <Link
-                  href='https://twitter.com/BakkerTom'
-                  className='flex items-center justify-center space-x-3 rounded-xl bg-blue-100 py-4 px-6 text-lg font-medium tracking-wide text-blue-500 hover:text-blue-400 dark:bg-blue-900 dark:text-blue-300 dark:hover:text-blue-200 sm:justify-start sm:text-base'
-                >
+                <Button href='https://www.twitter.com/BakkerTom' color='blue'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='24'
@@ -46,11 +44,8 @@ export default function HomePage() {
                     <path d='M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z'></path>
                   </svg>
                   <span>Twitter</span>
-                </Link>
-                <Link
-                  href='mailto:tom.bakker92@gmail.com'
-                  className='flex items-center justify-center space-x-3 rounded-xl bg-purple-100 py-4 px-6 text-lg font-medium tracking-wide text-purple-500 hover:text-purple-400 dark:bg-purple-900 dark:text-purple-300 dark:hover:text-purple-200 sm:justify-start sm:text-base'
-                >
+                </Button>
+                <Button href='https://www.twitter.com/BakkerTom' color='purple'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     viewBox='0 0 24 24'
@@ -61,7 +56,7 @@ export default function HomePage() {
                     <path d='M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z' />
                   </svg>
                   <span>Contact</span>
-                </Link>
+                </Button>
               </div>
             </div>
           </div>
