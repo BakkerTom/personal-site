@@ -11,7 +11,7 @@ export default function HomePage() {
       <Seo />
       <main>
         <section>
-          <div className='flex min-h-screen flex-col items-center justify-center px-4'>
+          <div className='flex flex-col items-center justify-center py-16 px-4 sm:min-h-screen sm:py-0'>
             <div>
               <div className='mb-8'>
                 <Avatar className='h-16 w-16 rounded-full' />
@@ -23,7 +23,7 @@ export default function HomePage() {
                 </span>
                 . I'm a designer and developer currently working at{' '}
                 <Link
-                  className='text-gray-600 transition-colors hover:text-primary-p3 dark:text-gray-100'
+                  className='text-gray-800 transition-colors hover:text-primary-p3 dark:text-gray-100'
                   href='https://apps.apple.com/nl/app/efteling/id727498391'
                 >
                   Efteling
@@ -33,7 +33,7 @@ export default function HomePage() {
               <div className='mt-12 flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4'>
                 <Link
                   href='https://twitter.com/BakkerTom'
-                  className='flex justify-center space-x-3 rounded-xl bg-blue-100 py-4 px-6 font-medium text-blue-500 hover:text-blue-400 dark:bg-blue-900 dark:text-blue-300 dark:hover:text-blue-200 sm:justify-start'
+                  className='flex items-center justify-center space-x-3 rounded-xl bg-blue-100 py-4 px-6 text-lg font-medium tracking-wide text-blue-500 hover:text-blue-400 dark:bg-blue-900 dark:text-blue-300 dark:hover:text-blue-200 sm:justify-start sm:text-base'
                 >
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -41,8 +41,6 @@ export default function HomePage() {
                     height='24'
                     viewBox='0 0 24 24'
                     fill='currentColor'
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
                     className='feather feather-twitter'
                   >
                     <path d='M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z'></path>
@@ -51,7 +49,7 @@ export default function HomePage() {
                 </Link>
                 <Link
                   href='mailto:tom.bakker92@gmail.com'
-                  className='flex justify-center space-x-3 rounded-xl bg-purple-100 py-4 px-6 font-medium text-purple-500 hover:text-purple-400 dark:bg-purple-900 dark:text-purple-300 dark:hover:text-purple-200 sm:justify-start'
+                  className='flex items-center justify-center space-x-3 rounded-xl bg-purple-100 py-4 px-6 text-lg font-medium tracking-wide text-purple-500 hover:text-purple-400 dark:bg-purple-900 dark:text-purple-300 dark:hover:text-purple-200 sm:justify-start sm:text-base'
                 >
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
