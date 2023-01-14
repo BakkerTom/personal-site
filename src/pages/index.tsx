@@ -10,7 +10,7 @@ export default function HomePage() {
   return (
     <Layout>
       <Seo />
-      <main>
+      <main style={{ WebkitTapHighlightColor: 'transparent' }}>
         <section>
           <div className='flex flex-col items-center justify-center py-16 px-4 sm:min-h-screen sm:py-0'>
             <div>
@@ -32,30 +32,8 @@ export default function HomePage() {
                 . I build apps using Swift and React Native.
               </p>
               <div className='mt-12 flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4'>
-                <Button href='https://www.twitter.com/BakkerTom' color='blue'>
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    width='24'
-                    height='24'
-                    viewBox='0 0 24 24'
-                    fill='currentColor'
-                    className='feather feather-twitter'
-                  >
-                    <path d='M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z'></path>
-                  </svg>
-                  <span>Twitter</span>
-                </Button>
-                <Button href='https://www.twitter.com/BakkerTom' color='purple'>
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    viewBox='0 0 24 24'
-                    fill='currentColor'
-                    className='h-6 w-6'
-                  >
-                    <path d='M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z' />
-                    <path d='M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z' />
-                  </svg>
-                  <span>Contact</span>
+                <Button href='mailto:tom.bakker92@gmail.com' color='purple'>
+                  👋 Say hello!
                 </Button>
               </div>
             </div>

@@ -2,7 +2,7 @@ import Link, { LinkProps } from 'next/link';
 import React, { PropsWithChildren } from 'react';
 
 type Props = {
-  color: 'blue' | 'purple';
+  color: 'blue' | 'purple' | 'orange';
 } & LinkProps;
 
 export default function Button({
@@ -12,12 +12,14 @@ export default function Button({
 }: PropsWithChildren<Props>) {
   const linkColors = {
     blue: 'text-blue-500 dark:text-blue-300 hover:text-blue-600 dark:hover:text-blue-200',
+    orange: 'text-primary-p3',
     purple:
       'text-purple-500 dark:text-purple-300 hover:text-purple-600 dark:hover:text-purple-200',
   };
 
   const bgColors = {
     blue: 'bg-blue-100 dark:bg-blue-900',
+    orange: 'bg-primary-p3/10',
     purple: 'bg-purple-100 dark:bg-purple-900',
   };
 
@@ -38,12 +40,15 @@ export default function Button({
         absolute inset-0 -z-10
         rounded-xl 
         ${bgColors[color]}
-        transform transition-transform 
-        duration-300 group-hover:scale-105
+        transform-gpu transition-transform 
+        duration-150 ease-out group-active:scale-95
+        sm:duration-200 sm:group-hover:scale-110
       `}
       ></div>
 
-      <div className='flex items-center space-x-3'>{children}</div>
+      <div className='flex items-center space-x-2 tracking-wide'>
+        {children}
+      </div>
     </Link>
   );
 }
