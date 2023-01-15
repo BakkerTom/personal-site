@@ -29,7 +29,7 @@ export default function Document() {
           media='(prefers-color-scheme: dark)'
         />
       </Head>
-      <body className='bg-gray-50 dark:bg-gray-800'>
+      <body className='bg-gray-50 font-primary text-lg font-medium text-gray-900 dark:bg-gray-800'>
         <Main />
         <NextScript />
       </body>
