@@ -13,7 +13,7 @@ export default function Book() {
         </div>
         <Link href='https://oku.club/book/project-hail-mary-by-andy-weir-l5lKi'>
           <div className='group mt-4 flex items-center space-x-6 rounded-2xl bg-gray-100 p-6 dark:bg-gray-700/50'>
-            <div className='relative w-20 transform-gpu overflow-hidden rounded shadow-lg transition-transform duration-200 ease-out group-hover:-rotate-6 group-hover:scale-110'>
+            <div className='relative w-20 transform-gpu overflow-hidden rounded-l-sm rounded shadow-lg transition-transform duration-200 ease-out group-hover:-rotate-6 group-hover:scale-110'>
               <img
                 src='https://oku.ams3.cdn.digitaloceanspaces.com/covers/2022/06/9d4f0653f7d7418f877c6c795d795b28.jpg'
                 alt='Everything everywhere all at once movie poster'
