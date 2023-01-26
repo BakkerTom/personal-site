@@ -1,3 +1,4 @@
+import { GetServerSideProps } from 'next';
 import Link from 'next/link';
 import * as React from 'react';
 
@@ -7,7 +8,7 @@ import Changelog from '@/components/changelog';
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 
-export default function HomePage() {
+export default function HomePage({ data }) {
   return (
     <Layout>
       <Seo />
@@ -42,10 +43,23 @@ export default function HomePage() {
           </div>
         </section>
         <section className='mt-20 text-lg'>
-          <h1 className='text-lg font-medium'>Changelog</h1>
-          <Changelog />
+          <h1 className='text-lg font-medium'>Lifelog</h1>
+          <Changelog data={data} />
         </section>
       </main>
     </Layout>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  // Fetch data from external API
+  const res = await fetch(`https://api.tombakker.online/feed.json`, {
+    headers: {
+      'Api-Key': process.env.API_KEY,
+    },
+  });
+  const data = await res.json();
+
+  // Pass data to the page via props
+  return { props: { data } };
+};
