@@ -55,11 +55,11 @@ export default function HomePage({ data }: Props) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getServerSideProps: GetServerSideProps = async () => {
   // Fetch data from external API
   const res = await fetch(`https://api.tombakker.online/feed.json`, {
     headers: {
-      'Api-Key': process.env.API_KEY,
+      'Api-Key': process.env.API_KEY || 'not-set',
     },
   });
   const data = await res.json();
