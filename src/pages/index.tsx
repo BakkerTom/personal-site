@@ -8,7 +8,11 @@ import Changelog from '@/components/changelog';
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 
-export default function HomePage({ data }) {
+type Props = {
+  data: any
+}
+
+export default function HomePage({ data }: Props) {
   return (
     <Layout>
       <Seo />
