@@ -1,5 +1,6 @@
 import Bookmark from './bookmark';
 import Movie from './movie';
+import Travel from './travel';
 
 type Activity = {
   id: number;
@@ -36,6 +37,16 @@ export default function Changelog({ data }: Props) {
           );
         }
 
+        if (activity.contentType === 'Travel') {
+          return (
+            <Travel
+              key={activity.id}
+              {...activity.content}
+              createdAt={new Date(activity.createdAt)}
+            />
+          );
+        }
+        
         return null;
       })}
     </ol>
