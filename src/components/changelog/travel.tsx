@@ -13,7 +13,7 @@ export default function Travel({ country, city, createdAt }: Props) {
       <div className='ml-10 flex-grow pt-2'>
         <h2>
           Traveled to{' '}
-          <span className="text-gray-900">{city}, {country}</span>
+          <span className="text-gray-900 dark:text-gray-50">{city}, {country}</span>
           <span className='text-sm font-normal text-gray-400 ml-2'>
             <TimeAgo
               date={new Date(createdAt)}
