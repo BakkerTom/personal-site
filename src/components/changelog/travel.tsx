@@ -9,7 +9,7 @@ type Props = {
 export default function Travel({ country, city, createdAt }: Props) {
   return (
     <li>
-      <div className='absolute -left-5 flex h-10 w-10 items-center justify-center rounded-full bg-green-100 ring-8 ring-gray-50 dark:bg-green-900 dark:ring-gray-800'>
+      <div className='absolute -left-5 flex h-10 w-10 items-center justify-center rounded-full bg-lime-100 ring-8 ring-gray-50 dark:bg-lime-900 dark:ring-gray-800'>
         ✈️
       </div>
       <div className='ml-10 flex-grow pt-2'>
