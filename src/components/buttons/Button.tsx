@@ -14,13 +14,13 @@ export default function Button({
     blue: 'text-blue-500 dark:text-blue-300 hover:text-blue-600 dark:hover:text-blue-200',
     orange: 'text-primary-p3',
     purple:
-      'text-purple-500 dark:text-purple-300 hover:text-purple-600 dark:hover:text-purple-200',
+      'text-purple-500 dark:text-purple-400 hover:text-purple-600 dark:hover:text-purple-300',
   };
 
   const bgColors = {
     blue: 'bg-blue-100 dark:bg-blue-900',
     orange: 'bg-primary-p3/10',
-    purple: 'bg-purple-100 dark:bg-purple-900',
+    purple: 'bg-purple-100 dark:bg-purple-500/20',
   };
 
   return (
