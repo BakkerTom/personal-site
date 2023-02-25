@@ -1,10 +1,11 @@
 import Bookmark from './bookmark';
 import Movie from './movie';
+import Photo from './photo';
 import Travel from './travel';
 
 type Activity = {
   id: number;
-  contentType: 'Movie' | 'Bookmark';
+  contentType: 'Movie' | 'Bookmark' | 'Travel' | 'Photo';
   content: any;
   createdAt: string;
 };
@@ -40,6 +41,16 @@ export default function Changelog({ data }: Props) {
         if (activity.contentType === 'Travel') {
           return (
             <Travel
+              key={activity.id}
+              {...activity.content}
+              createdAt={new Date(activity.createdAt)}
+            />
+          );
+        }
+        
+        if (activity.contentType === 'Photo') {
+          return (
+            <Photo
               key={activity.id}
               {...activity.content}
               createdAt={new Date(activity.createdAt)}
