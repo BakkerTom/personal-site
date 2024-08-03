@@ -1,18 +1,12 @@
-import { GetServerSideProps } from 'next';
 import Link from 'next/link';
 import * as React from 'react';
 
 import Avatar from '@/components/avatar';
 import Button from '@/components/buttons/Button';
-import Changelog from '@/components/changelog';
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 
-type Props = {
-  data: any
-}
-
-export default function HomePage({ data }: Props) {
+export default function HomePage() {
   return (
     <Layout>
       <Seo />
@@ -46,24 +40,7 @@ export default function HomePage({ data }: Props) {
             </div>
           </div>
         </section>
-        <section className='mt-20 text-lg'>
-          <h1 className='text-lg font-medium'>Lifelog</h1>
-          <Changelog data={data} />
-        </section>
       </main>
     </Layout>
   );
 }
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  // Fetch data from external API
-  const res = await fetch(`https://api.tombakker.online/feed.json`, {
-    headers: {
-      'Api-Key': process.env.API_KEY || 'not-set',
-    },
-  });
-  const data = await res.json();
-
-  // Pass data to the page via props
-  return { props: { data } };
-};
